@@ -1,0 +1,26 @@
+header{
+    height: 80px;
+    text-align: center;
+}
+#lewo{
+    width: 80%;
+    float: left;
+}
+#prawo{
+    background-color: blueviolet;
+    width: 20%;
+    height: 50%;
+    float: right;
+}
+#prawo2{
+    height: 50%;
+    clear: both;
+}
+#obrazTlo{
+    width: 100%;
+    height: auto;
+}
+#profil, #coins, #drewno, #surowce, #gems{
+    width: 16,5%;
+    float: left;
+}
