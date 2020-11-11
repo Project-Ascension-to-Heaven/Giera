@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <p>JEBAĆ PIS</p>
+    <?php
+        echo "pis jest jebany";
+    
+    ?>
 </body>
 </html>
