@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img id="obrazTlo" src="header.png">
+    <header style="background-image: url('header.png')">
+        
         <!--<div id="profil">
             <img src="22.png">
         </div>
@@ -33,9 +33,10 @@
         </div>
         <div id="prawo">
             chuj
-            <div id="prawo2">
-                jebać
-            </div>
         </div>
+        <div id="prawo2">
+            jebać
+        </div>
+        
 </body>
 </html>

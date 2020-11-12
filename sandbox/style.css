@@ -1,20 +1,27 @@
 header{
-    height: 80px;
+    height: 10%;
     text-align: center;
 }
 #lewo{
     width: 80%;
-    float: left;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 #prawo{
     background-color: blueviolet;
     width: 20%;
-    height: 50%;
-    float: right;
+    height: 45%;
+    right: 0;
+    top: 10%;
+    position: fixed;
 }
 #prawo2{
-    height: 50%;
-    clear: both;
+    width: 20%;
+    height: 45%;
+    right: 0;
+    top: 55%;
+    position: fixed;
 }
 #obrazTlo{
     width: 100%;
