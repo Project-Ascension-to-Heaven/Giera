@@ -1,34 +1,30 @@
-header{
-    height: 10%;
-    text-align: center;
-}
-#lewo{
-    width: 80%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-}
-#prawo{
-    background-color: blueviolet;
-    width: 20%;
-    height: 45%;
-    right: 0;
-    top: 10%;
-    position: fixed;
-}
-#prawo2{
-    background-color: khaki;
-    width: 20%;
-    height: 45%;
-    right: 0;
-    top: 55%;
-    position: fixed;
-}
-#obrazTlo{
+#obrazTlo {
     width: 100%;
     height: auto;
 }
-#profil, #coins, #drewno, #surowce, #gems{
-    width: 16,5%;
+
+#profil,
+#coins,
+#drewno,
+#surowce,
+#gems {
+    width: 16, 5%;
     float: left;
+}
+
+div {
+    color: white;
+    font-size: 16px;
+}
+
+#lewo {
+    width: 100%;
+}
+
+#prawo {
+    width: 50%;
+}
+
+#top {
+    background-image: url(header.png);
 }
