@@ -59,8 +59,9 @@
 
     ?>
     </pre>
-    <a href=""
+    <a href="index.php?action=upgradeBuilding&building=tartak">
     <button>Rozbuduj Tartak</button>
+    <a href="index.php?action=upgradeBuilding&building=kopalniaMetali">
     <button>Rozbuduj Kopalnie</button>
 </body>
 </html>
