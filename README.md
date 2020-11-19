@@ -1,2 +1,2 @@
 # Giera
-Giera tak o kurna
+Najlepsza giera na przeglądare tak o 
