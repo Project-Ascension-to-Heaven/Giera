@@ -1,6 +1,6 @@
 <pre>
 <?php
-        require('./Sandbox/Villageclass.php');
+        require('./sandbox/class/Villageclass.php');
         session_start();
 
     
@@ -13,7 +13,7 @@
         }
         else 
         {
-            $_SESSION['v'] - $v;
+            $v = $_SESSION['v'];
             $deltaTime = time() - $_SESSION['time'];
         }
         $v->gain($deltaTime);
