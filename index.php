@@ -1,22 +1,18 @@
 <pre>
 <?php
-        require('./sandbox/class/Villageclass.php');
+        require('./sandbox/class/GameManager.class.php');
         session_start();
-
-    
-        if(!isset($_SESSION['v']))
+        if(!isset($_SESSION['gm']))
         {
-            echo "Tworzę nową wioskę";
-            $v = new Village();
-            $_SESSION['v'] = $v;
-            $deltaTime = 0;
-        }
-        else 
+            $gm = new GameManager();
+            $_SESSION['gm'] = $gm;
+        } 
+        else
         {
-            $v = $_SESSION['v'];
-            $deltaTime = time() - $_SESSION['time'];
+            $gm = $_SESSION['gm'];
         }
-        $v->gain($deltaTime);
+        $v = $gm->v;
+        $gm->sync();
 
         if(isset($_REQUEST['action']))
         {
@@ -38,16 +34,6 @@
             }
 
         }
-
-
-
-
-
-
-        $_SESSION['time'] = time();
-        var_dump($v);
-        var_dump($_REQUEST);
-
 
     ?>
     </pre>
@@ -77,15 +63,22 @@
             <div class="col-12 col-md-3">
                 Lista Budynków<br>
                 Tartak: <br>
-                Zysk/h: <?php $v->showHourGain("wood"); ?> <br>
+                Zysk/h: <?php echo $v->showHourGain("wood"); ?> <br>
             <a href="index.php?action=upgradeBuilding&building=tartak">
                 <button>Rozbuduj Tartak</button>
             </a><br>
                 KopalnieMetali: <br>
-                Zysk/h: <?php $v->showHourGain("metale"); ?> <br>
+                Zysk/h: <?php echo $v->showHourGain("metale"); ?> <br>
             <a href="index.php?action=upgradeBuilding&building=kopalniaMetali">
                 <button>Rozbuduj Kopalnie</button>
             </a><br>
+                Farmy: <br>
+                Zysk/h: <?php echo $v->showHourGain("jedzenie"); ?> <br>
+            <a href="index.php?action=upgradeBuilding&building=farmy">
+            </a><br>
+                Skarbówka: <br>
+                Zysk/h: <?php echo $v->showHourGain("monety"); ?> <br>
+            <a href="index.php?action=upgradeBuilding&building=skarbowka">
             </div>
             <div class="col-12 col-md-6">
                 Widok wioski
