@@ -1,5 +1,5 @@
 <?php
-require_once('Village.class.php');
+require_once('Villageclass.php');
 require_once('Log.class.php');
 class GameManager
 {
@@ -23,7 +23,6 @@ class GameManager
     {
         $this->v->gain($this->deltaTime());
 
-        //na koniec
         $this->t = time();
     }
 }
