@@ -29,7 +29,7 @@ class Village
                 3 => array(
                     'drewno' => 100,
                     'metale' => 50,
-                    'monety' => 80
+                    'monety' => 80,
                 ),
             ),
             'kopalniaMetali' => array(
@@ -39,7 +39,7 @@ class Village
                 3 => array(
                      'drewno' => 300,
                      'metale' => 150,
-                     'monety' => 100
+                     'monety' => 100,
                 ),
             
             ),

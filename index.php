@@ -77,12 +77,12 @@
             <div class="col-12 col-md-3">
                 Lista Budynków<br>
                 Tartak: <br>
-                Zysk/h: <?php $v->showHourGain("wood"); ?> <br>
+                Zysk/h: <?php echo $v->showHourGain("wood"); ?> <br>
             <a href="index.php?action=upgradeBuilding&building=tartak">
                 <button>Rozbuduj Tartak</button>
             </a><br>
                 KopalnieMetali: <br>
-                Zysk/h: <?php $v->showHourGain("metale"); ?> <br>
+                Zysk/h: <?php echo $v->showHourGain("metale"); ?> <br>
             <a href="index.php?action=upgradeBuilding&building=kopalniaMetali">
                 <button>Rozbuduj Kopalnie</button>
             </a><br>
