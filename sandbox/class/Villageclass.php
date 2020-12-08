@@ -3,7 +3,6 @@ class Village
 {
     private $buildings; 
     private $storage;
-    private $upgradeCost;
     private $gm;
 
     public function __construct($gameManager)
