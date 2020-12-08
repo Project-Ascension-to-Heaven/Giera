@@ -108,7 +108,7 @@ class Village
     public function upgradeBuilding(string $buildingName) : bool
     {
         $currentLVL = $this->buildings[$buildingName];
-        $cost = $this->upgradeCost[$buildingName][$currentLVL+1];
+        $cost = $this->upgradeBuilding[$buildingName][$currentLVL+1];
         foreach ($cost as $key => $value) {
 
             if($value > $this->storage[$key])
@@ -124,7 +124,7 @@ class Village
     public function checkBuildingUpgrade(string $buildingName) : bool
     {
         $currentLVL = $this->buildings[$buildingName];
-        $cost = $this->upgradeCost[$buildingName][$currentLVL+1];
+        $cost = $this->upgradeBuilding[$buildingName][$currentLVL+1];
         foreach ($cost as $key => $value) {
 
             if($value > $this->storage[$key])
