@@ -63,21 +63,25 @@
             <div class="col-12 col-md-3">
                 Lista Budynków<br>
                 Tartak: <br>
+                Drewno:<?php echo $v->showStorage("drewno"); ?> <br>
                 Zysk/h: <?php echo $v->showHourGain("wood"); ?> <br>
             <a href="index.php?action=upgradeBuilding&building=tartak">
                 <button>Rozbuduj Tartak</button>
             </a><br>
                 KopalnieMetali: <br>
+                Metale:<?php echo $v->showStorage("metale"); ?> <br>
                 Zysk/h: <?php echo $v->showHourGain("metale"); ?> <br>
             <a href="index.php?action=upgradeBuilding&building=kopalniaMetali">
                 <button>Rozbuduj Kopalnie</button>
             </a><br>
                 Farmy: <br>
+                Jedzenie:<?php echo $v->showStorage("jedzenie"); ?> <br>
                 Zysk/h: <?php echo $v->showHourGain("jedzenie"); ?> <br>
             <a href="index.php?action=upgradeBuilding&building=farmy">
                 <button>Rozbuduj Farmy</button>
             </a><br>
-                Skarbówka: <br>
+                Skarbówka: <br> 
+                Monety:<?php echo $v->showStorage("monety"); ?> <br>
                 Zysk/h: <?php echo $v->showHourGain("monety"); ?> <br>
             <a href="index.php?action=upgradeBuilding&building=skarbowka">
                 <button>Rozbuduj Skarbówkę</button>
@@ -87,7 +91,8 @@
                 Widok wioski
             </div>
             <div class="col-12 col-md-3">
-                Lista wojska
+                Lista wojska <br>
+
             </div>
         </main>
         <footer class="row">
