@@ -135,7 +135,7 @@ class Village
     public function showHourGain(string $resource) : string
     {
         switch($resource){
-            case 'wood';
+            case 'drewno';
                 return $this->drewnoGain(3600);
         break;
             case 'metale';
