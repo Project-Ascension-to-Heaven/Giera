@@ -13,7 +13,7 @@ class Village
             'tartak' => 1,
             'kopalniaMetali' => 1,
             'farmy' => 1,
-            'skarbowka' => 0,
+            'skarbowka' => 1,
         );
         $this->storage = array(
             'drewno' => 0,
@@ -56,12 +56,12 @@ class Village
                 ),
             ),
             'skarbówka' => array(
-                1 => array(
+                2 => array(
                     'drewno' => 200,
                     'metale' => 75,
                     'jedzenie' => 100,
                 ),
-                2 => array(
+                3 => array(
                     'drewno' => 400,
                     'metale' => 140,
                     'jedznie' => 120,
@@ -110,13 +110,26 @@ class Village
         $currentLVL = $this->buildings[$buildingName];
         $cost = $this->upgradeCost[$buildingName][$currentLVL+1];
         foreach ($cost as $key => $value) {
+
             if($value > $this->storage[$key])
-            return false;
+                return false;
         }
-        foreach ($cost as $key => $value){
-           $this->storage[$key] -= $value;
+        foreach ($cost as $key => $value) {
+
+            $this->storage[$key] -= $value;
         }
         $this->buildings[$buildingName] += 1; 
+        return true;
+    }
+    public function checkBuildingUpgrade(string $buildingName) : bool
+    {
+        $currentLVL = $this->buildings[$buildingName];
+        $cost = $this->upgradeCost[$buildingName][$currentLVL+1];
+        foreach ($cost as $key => $value) {
+
+            if($value > $this->storage[$key])
+                return false;
+        }
         return true;
     }
     public function showHourGain(string $resource) : string
@@ -128,7 +141,7 @@ class Village
             case 'metale';
                 return $this->metaleGain(3600);
         break;
-             case 'jedznie';
+             case 'jedzenie';
                 return $this->jedzenieGain(3600);
         break;
             case 'monety';

@@ -25,7 +25,7 @@
                     }
                     else
                     {
-                        echo "Kowal spalił ci Truta +8";
+                        echo "Kowal spalił ci Truta +8".$_REQUEST['building'];
                     }
                 break;
                 default:
@@ -75,10 +75,13 @@
                 Farmy: <br>
                 Zysk/h: <?php echo $v->showHourGain("jedzenie"); ?> <br>
             <a href="index.php?action=upgradeBuilding&building=farmy">
+                <button>Rozbuduj Farmy</button>
             </a><br>
                 Skarbówka: <br>
                 Zysk/h: <?php echo $v->showHourGain("monety"); ?> <br>
             <a href="index.php?action=upgradeBuilding&building=skarbowka">
+                <button>Rozbuduj Skarbówkę</button>
+            </a><br>
             </div>
             <div class="col-12 col-md-6">
                 Widok wioski
