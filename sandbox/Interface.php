@@ -33,7 +33,7 @@
                 {
                     function_alert("Kowal spalił ci Truta +8 ".$_REQUEST['building']);
                     //echo "Kowal spalił ci Truta +8".$_REQUEST['building'];
-                    header("Location: Interface.php");
+                    //header("Location: Interface.php");
                 }
             break;
             default:
