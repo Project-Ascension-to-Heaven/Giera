@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>َAnimated Login Form</title>
+    <title>Login Screen</title>
     <link rel="stylesheet" href="stylelogin.css">
   </head>
   <body>
