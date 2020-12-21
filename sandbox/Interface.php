@@ -3,7 +3,7 @@
     function function_alert($message) { 
         echo "<script>alert('$message');</script>"; 
     } 
-        
+    
     require('./class/GameManager.class.php');
     session_start();
     if(!isset($_SESSION['gm']))
@@ -32,6 +32,7 @@
                 {
                     function_alert("Kowal spalił ci Truta +8 ".$_REQUEST['building']);
                     //echo "Kowal spalił ci Truta +8".$_REQUEST['building'];
+                    //header("Location: Interface.php");
                 }
             break;
             default:
