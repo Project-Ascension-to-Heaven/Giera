@@ -1,7 +1,6 @@
 <pre>
 <?php
     function function_alert($message) { 
-        // Display the alert box  
         echo "<script>alert('$message');</script>"; 
     } 
         
@@ -55,7 +54,8 @@
         <div class="container-fluid">
             <div class="row" id="top">
                 <div class="col-2">
-                    Nick: Marek 
+                    Nick: <?php  if ($_REQUEST["nick"] == $_REQUEST["nick"]) 
+                     echo $_POST['nick']; ?>
                 </div>
                 <div class="col-2">
                     Gildia: brak
