@@ -20,11 +20,11 @@
     
         if($wprowadzonylogin == $prawdilowylogin && $wprowadzonehaslo == $prawdilowehaslo)   
         {
-            function_alert("<p>Zalogowano!</p>");
+            function_alert("Zalogowano!");
         } 
         else
         {
-            function_alert("<p>Nie prawidłowe dane logowania!</p>");
+            function_alert("Nie prawidłowe dane logowania!");
         }
     }
 
