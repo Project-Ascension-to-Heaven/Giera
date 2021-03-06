@@ -54,16 +54,16 @@ class Village
                     'monety' => 200,
                 ),
             ),
-            'skarbówka' => array(
+            'skarbowka' => array(
                 2 => array(
                     'drewno' => 200,
                     'metale' => 75,
-                    'jedzenie' => 100,
+                    'jedzenie' => 120,
                 ),
                 3 => array(
                     'drewno' => 400,
                     'metale' => 140,
-                    'jedznie' => 120,
+                    'jedznie' => 240,
                 ),
             ),
 
