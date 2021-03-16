@@ -23,20 +23,21 @@
         switch($_REQUEST['action'])
         {
             case "upgradeBuilding":
-                if($v->upgradeBuilding($_REQUEST['building']))
-                {
-                    function_alert("Ulepszono budynek: ".$_REQUEST['building']);
-                    //echo "Ulepszono budynek: ".$_REQUEST['building'];
-                }
-                else
-                {
-                    function_alert("Kowal spalił ci Truta +8 ".$_REQUEST['building']);
-                    //echo "Kowal spalił ci Truta +8".$_REQUEST['building'];
-                    //header("Location: Interface.php");
-                }
+                //if($v->upgradeBuilding($_REQUEST['building']))
+                //{
+                //    function_alert("Ulepszono budynek: ".$_REQUEST['building']);
+                //    //echo "Ulepszono budynek: ".$_REQUEST['building'];
+                //}
+                //else
+                //{
+                //    function_alert("Kowal spalił ci Truta +8 ".$_REQUEST['building']);
+                //    //echo "Kowal spalił ci Truta +8".$_REQUEST['building'];
+                //    //header("Location: Interface.php");
+                //}
+                $v->upgradeBuilding($_REQUEST['building']);
             break;
             default:
-                echo 'Nieprawidłowa zmienna action';
+                $gm->l->log("Nieprawidłowa zmienna \"action\"", "controller", "error");
         }
     }
 ?>
@@ -102,7 +103,26 @@
                 </div>
             </div>
         </div>
-    
+    <footer class="row">
+        <div class="col-12">
+            <table class="table table-bordered">
+                <?php
+                    foreach ($gm->l->getLog() as $entry) {
+                        $timestamp = date('d.m.Y H:i:s', $entry['timestamp']);
+                        $sender = $entry['sender'];
+                        $message = $entry['message'];
+                        $type = $entry['type'];
+                        echo "<tr>";
+                        echo "<td>$timestamp</td>";
+                        echo "<td>$sender</td>";
+                        echo "<td>$message</td>";
+                        echo "<td>$type</td>";
+                        echo "</tr>";
+                    }
+                ?>
+            </table>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
