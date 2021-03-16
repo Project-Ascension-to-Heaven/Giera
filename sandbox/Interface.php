@@ -57,7 +57,7 @@
             <div class="row" id="top">
                 <div class="col-2">
                     Nick: <?php  if ($_REQUEST["nick"] == $_REQUEST["nick"]) 
-                     echo $_POST['nick']; ?>
+                        echo $_POST['nick']; ?>
                 </div>
                 <div class="col-2">
                     Gildia: brak
