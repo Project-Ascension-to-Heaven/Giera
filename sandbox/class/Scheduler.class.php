@@ -18,9 +18,9 @@ class Scheduler
         $this->log('utworzono do schedulera nową pozyjcę', 'info');
     }
 
-    public function check($timestamp)
+    public function check()
     {
-        $todo = array();
+        /* $todo = array();
         $this->log('kompletuję listę zaległych rzeczy do zrobienia', 'info');
         foreach($this->schedule as $task)
         {
@@ -30,10 +30,24 @@ class Scheduler
             }
         }
         $this->execute($todo);
+        */
+        foreach($this->schedule as $key =>$task){
+            if($task['timestamp'] <= time())
+                if($this->execute($task))
+                {
+                    unset($this->schedule[$key]);
+                    $this->schedule = array_values($this->schedule);
+                }
+                else
+                {
+                    $this->log("nie udało się wykonać zadania z timestamp: ".$task['timestamp'], 'info');
+                }
+        }
     }
 
-    public function execute($taskList)
+    public function execute($task)
     {
+        /*
         if(count($taskList) > 0)
             $this->log('wykonuję listę zadań', 'info');
         foreach($taskList as $task)
@@ -51,6 +65,19 @@ class Scheduler
                 $this->gm->t = $task['timestamp'];
                 $this->log("synchornizuję czas gry do czasu ukończenia zadania", 'info');
             }
+        }*/
+        if($task['class'] == 'Village')
+        {
+            //przetwarzanie zadań wioski
+            $className = $task['class'];
+            $functionName = $task['function'];
+            $param = $task['param'];
+            $this->log("synchronizuję surowce w wiosce do stanu na czas".date('d.m.Y H:i:s',$task['timestamp']), 'info');
+            $this->gm->v->gain($task['timestamp'] - $this->gm->t);
+            $this->log("wywołuję funkcję $functionName dla klasy $className z parametrem $param", 'info');
+            $this->gm->v->{$functionName}($param);
+            $this->log("synchornizuję czas gry do czasu ukończenia zadania", 'info');
+            $this->gm->t = $task['timestamp'];
         }
     }
 
