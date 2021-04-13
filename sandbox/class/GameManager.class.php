@@ -1,10 +1,12 @@
 <?php
 require_once('Villageclass.php');
 require_once('Log.class.php');
+require_once('Scheduler.class.php');
 class GameManager
 {
     public $v;
     public $l;
+    public $s;
     public $t;
 
     public function __construct()
@@ -12,6 +14,7 @@ class GameManager
         $this->l = new Log();
         $this->l->log("Tworzę nową gre...", 'gameManager', 'info');
         $this->v = new Village($this);
+        $this->s = new Scheduler($this);
         $this->t = time();
 
     }
@@ -21,8 +24,9 @@ class GameManager
     }
     public function sync()
     {
-        $this->v->gain($this->deltaTime());
+        $this->s->check($this->t);
 
+        $this->v->gain($this->deltaTime());
         $this->t = time();
     }
 }

@@ -124,9 +124,16 @@ class Village
 
                 $this->storage[$key] -= $value;
             }
+            //$this->buildings[$buildingName] += 1; 
+            //$this->log("Ulepszono budynek: ".$this->buildings[$buildingName], "info");
+            //odwołanie do schedulera
+            $this->gm->s->add(time()+300, 'Village', 'scheduleBuildingUpgrade', $buildingName);
+            return true;
+        }
+        public function scheduleBuildingUpgrade(string $buildingName)
+        {
             $this->buildings[$buildingName] += 1; 
             $this->log("Ulepszono budynek: ".$this->buildings[$buildingName], "info");
-            return true;
         }
         public function checkBuildingUpgrade(string $buildingName) : bool
         {
