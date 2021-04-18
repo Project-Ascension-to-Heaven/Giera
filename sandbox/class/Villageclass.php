@@ -127,7 +127,7 @@ class Village
             //$this->buildings[$buildingName] += 1; 
             //$this->log("Ulepszono budynek: ".$this->buildings[$buildingName], "info");
             //odwołanie do schedulera
-            $this->gm->s->add(time()+300, 'Village', 'scheduleBuildingUpgrade', $buildingName);
+            $this->gm->s->add(time()+60, 'Village', 'scheduleBuildingUpgrade', $buildingName);
             return true;
         }
         public function scheduleBuildingUpgrade(string $buildingName)
@@ -138,6 +138,8 @@ class Village
         public function checkBuildingUpgrade(string $buildingName) : bool
         {
             $currentLVL = $this->buildings[$buildingName];
+            if(!isset($this->upgradeCost[$buildingName][$currentLVL+1]))
+                return false;
             $cost = $this->upgradeBuilding[$buildingName][$currentLVL+1];
             foreach ($cost as $key => $value) {
 
