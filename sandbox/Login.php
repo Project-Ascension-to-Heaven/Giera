@@ -7,11 +7,11 @@
   </head>
   <body>
 
-<form class="box" action="Interface.php" method="POST">
-  <h1>Logowanie</h1>
-  <input type="text" name="nick" placeholder="Nazwa użytkownika">
-  <input type="submit" name="guzik" value="Zaloguj">
-</form>
+    <form class="box" action="Interface.php" method="POST">
+      <h1>Logowanie</h1>
+      <input type="text" name="nick" placeholder="Nazwa użytkownika">
+      <input type="submit" name="guzik" value="Zaloguj">
+    </form>
 
 
   </body>
