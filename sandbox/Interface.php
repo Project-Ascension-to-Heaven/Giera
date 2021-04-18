@@ -1,8 +1,11 @@
 <!--<pre>-->
 <?php
-    require(__DIR__.'/smarty/libs/Smarty.class.php');
 /*początek smarty init*/
+    require(__DIR__.'/smarty/libs/Smarty.class.php');
+    require_once(__DIR__.'/class/DB.class.php');
+
     $smarty = new Smarty();
+    $db = new DB();
 
     $smarty->setTemplateDir(__DIR__.'/smarty/templates');
     $smarty->setCompileDir(__DIR__.'/smarty/templates_c');
@@ -16,6 +19,10 @@
     
     require('./class/GameManager.class.php');
     session_start();
+    if (!isset($_SESSION['player_id']) && !isset($_REQUEST['login'])) {
+        $smarty->display('login.tpl');
+        exit;
+    }
     if(!isset($_SESSION['gm']))
     {
         $gm = new GameManager();
@@ -32,6 +39,28 @@
     {
         switch($_REQUEST['action'])
         {
+            case 'register';
+                if(isset($_REQUEST['login']) && isset($_REQUEST['password']))
+                {
+                    $db->registerPlayer($_REQUEST['login'], $_REQUEST['password']);
+
+                }else
+                {
+                    $smarty->display('register.tpl');
+                    exit;
+                }
+            break;
+            case 'login';
+                if(isset($_REQUEST['login']) && isset($_REQUEST['password']))
+                    {
+                        $db->loginPlayer($_REQUEST['login'], $_REQUEST['password']);
+
+                    }else
+                    {
+                        $smarty->display('login.tpl');
+                        exit;
+                    }
+            break;
             case "upgradeBuilding":
                 //if($v->upgradeBuilding($_REQUEST['building']))
                 //{
@@ -50,6 +79,8 @@
                 $gm->l->log("Nieprawidłowa zmienna \"action\"", "controller", "error");
         }
     }
+    $smarty->assign('playerLogin', $_SESSION['player_login']);
+    
     $smarty->assign('jedzenie', $v->showStorage("jedzenie"));
     $smarty->assign('drewno', $v->showStorage("drewno"));
     $smarty->assign('metale', $v->showStorage("metale"));
