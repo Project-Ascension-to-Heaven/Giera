@@ -5,7 +5,7 @@
     require_once(__DIR__.'/class/DB.class.php');
 
     $smarty = new Smarty();
-    $db = new DB();
+    $db = new DB();   
 
     $smarty->setTemplateDir(__DIR__.'/smarty/templates');
     $smarty->setCompileDir(__DIR__.'/smarty/templates_c');
@@ -80,7 +80,7 @@
         }
     }
     $smarty->assign('playerLogin', $_SESSION['player_login']);
-    
+
     $smarty->assign('jedzenie', $v->showStorage("jedzenie"));
     $smarty->assign('drewno', $v->showStorage("drewno"));
     $smarty->assign('metale', $v->showStorage("metale"));
