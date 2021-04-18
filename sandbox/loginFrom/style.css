@@ -1,0 +1,9 @@
+div#loginForm {
+    position: fixed;
+}
+
+div#loginForm input,
+div#loginForm button{
+    width: 100%;
+    margin-bottom: 10px;
+}
