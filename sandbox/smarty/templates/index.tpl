@@ -13,8 +13,7 @@
         <div class="container-fluid">
             <div class="row" id="top">
                 <div class="col-2">
-                    Nick: <?php  if ($_REQUEST["nick"] == $_REQUEST["nick"]) 
-                        echo $_POST['nick']; ?>
+                    Nick: {$playerLogin}
                 </div>
                 <div class="col-2">
                     Gildia: brak
