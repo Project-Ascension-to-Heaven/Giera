@@ -80,6 +80,8 @@ class Village
             return $perSecondGain * $deltaTime;
 
         }
+        // POLSKI MY NARÓD POLSKI LUD
+        // KRÓLEWSKI SZCZEP PIASTOWY
         private function metaleGain(int $deltaTime) : float
         {
             $gain = pow($this->buildings['kopalniaMetali'],2) * 5000;
