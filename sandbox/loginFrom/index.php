@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head> <!--<sprawdzam czy dziala lolllz>-->
+</head>
 <body>
     <?php
     if(!isset($_REQUEST['username']))
