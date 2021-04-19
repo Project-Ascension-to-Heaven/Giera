@@ -11,11 +11,11 @@
         public function registerPlayer(string $login, string $password) : bool
         {
             $passwordHash = password_hash($password, PASSWORD_ARGON2I);
-            $query = $this->conn->prepare("INSERT INTO player (id, login, password) 
-                                            VALUES (NULL, ?, ?)");
+            $query = $this->conn->prepare("INSERT INTO player (id, login, password) VALUES (NULL, ?, ?)");
             $query->bind_param("ss", $login, $passwordHash);
             $result = $query->execute();
-            if($result) {
+            if($result) 
+            {
                 $this->newVillage($query->insert_id);
             }
             return $result;
@@ -36,17 +36,18 @@
             else
                 return false;
         }
-        public function newVillage(int $player_id) {
-            $query = $this->conn->prepare("INSERT INTO village (id, player_id, townHall, woodcutter, ironMine, farm)
-                                    VALUES (NULL, ?, ?, ?, ?, ?");
-            $query->bind_param('iiiii', $player_id, 1, 1, 0, 0);
+        public function newVillage(int $player_id) 
+        {
+            $query = $this->conn->prepare("INSERT INTO village (id, player_id, townHall, woodcutter, ironMine, farm) VALUES (NULL, ?, ?, ?, ?, ?, ?");
+            $query->bind_param('iiiiii', $player_id, 1, 1, 1, 1, 1);
             $query->execute();
         }
 
-        //public function saveVillage(Village $v) {
-        //    $buildings = $v->buildingLevelList();
-        //    $query = $this->conn->prepare("UPDATE");
-        //}
+        public function saveVillage(Village $v) 
+        {
+            $buildings = $v->buildingLevelList();
+            $query = $this->conn->prepare("UPDATE");
+        }
     }
 
 ?>

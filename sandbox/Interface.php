@@ -1,8 +1,12 @@
 <!--<pre>-->
 <?php
-/*początek smarty init*/
-    require(__DIR__.'/smarty/libs/Smarty.class.php');
+
+    require_once(__DIR__.'/smarty/libs/Smarty.class.php');
     require_once(__DIR__.'/class/DB.class.php');
+    require_once(__DIR__.'/class/GameManager.class.php');
+    require_once(__DIR__.'/class/Route.class.php');
+
+    session_start();
 
     $smarty = new Smarty();
     $db = new DB();   
@@ -12,13 +16,42 @@
     $smarty->setCacheDir(__DIR__.'/smarty/cache');
     $smarty->setConfigDir(__DIR__.'/smarty/confing');
     $smarty->assign('config', array('date' => '%d.%m.%Y', 'time' => '%H:%M:%S', 'datetime' => '%d.%m.%Y %H:%M:%S'));
-/*koniec smarty init*/
+
+    if(!isset($_SESSION['gm']))
+    {
+        $gm = new GameManager();
+        $_SESSION['gm'] = $gm;
+    } 
+    else
+    {
+        $gm = $_SESSION['gm'];
+    }
+    $v = $gm->v;
+    $gm->sync();
+
+    Route::add('/', function() {
+        global $smarty;
+        $smarty->assign('jedzenie', $v->showStorage("jedzenie"));
+        $smarty->assign('drewno', $v->showStorage("drewno"));
+        $smarty->assign('metale', $v->showStorage("metale"));
+        $smarty->assign('monety', $v->showStorage("monety"));
+
+        $smarty->assign('jedzenieGain', $v->showHourGain("jedzenie"));
+        $smarty->assign('drewnoGain', $v->showHourGain("drewno"));
+        $smarty->assign('metaleGain', $v->showHourGain("metale"));
+        $smarty->assign('monetyGain', $v->showHourGain("monety"));
+
+        $smarty->assign('logArray', $gm->l->getLog());
+        $smarty->display('index.tpl');
+    });
+    
+    
+    Route::run('/Giera');
+    exit;
     function function_alert($message) { 
         echo "<script>alert('$message');</script>"; 
     } 
     
-    require('./class/GameManager.class.php');
-    session_start();
     if (!isset($_SESSION['player_id']) && !isset($_REQUEST['login'])) {
         $smarty->display('login.tpl');
         exit;
