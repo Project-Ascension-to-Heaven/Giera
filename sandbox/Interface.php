@@ -30,7 +30,7 @@
     $gm->sync();
 
     Route::add('/', function() {
-        global $smarty;
+        global $smarty, $gm, $v;
         $smarty->assign('jedzenie', $v->showStorage("jedzenie"));
         $smarty->assign('drewno', $v->showStorage("drewno"));
         $smarty->assign('metale', $v->showStorage("metale"));
