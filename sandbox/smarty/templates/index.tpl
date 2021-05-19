@@ -13,7 +13,7 @@
         <div class="container-fluid">
             <div class="row" id="top">
                 <div class="col-2">
-                    Nick: {$playerLogin}
+                    Nick: {$playerLogin|default:"Anonim"}
                 </div>
                 <div class="col-2">
                     Gildia: brak

@@ -30,7 +30,7 @@
     $gm->sync();
 
     Route::add('/', function() {
-        /*global $smarty, $gm, $v;
+        global $smarty, $gm, $v;
         $smarty->assign('jedzenie', $v->showStorage("jedzenie"));
         $smarty->assign('drewno', $v->showStorage("drewno"));
         $smarty->assign('metale', $v->showStorage("metale"));
@@ -42,9 +42,9 @@
         $smarty->assign('monetyGain', $v->showHourGain("monety"));
 
         $smarty->assign('logArray', $gm->l->getLog());
-        $smarty->display('index.tpl');*/
+        $smarty->display('index.tpl');
 
-        echo "Strona główna";
+        /*echo "Strona główna";*/
     });
     
     Route::add('/login', function(){

@@ -18,4 +18,4 @@
         $_SESSION['ostatniRefresh'] = time();
     }
 
-?>
+?> 

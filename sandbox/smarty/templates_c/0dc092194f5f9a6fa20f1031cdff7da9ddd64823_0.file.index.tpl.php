@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-04-17 18:57:39
+/* Smarty version 3.1.39, created on 2021-05-19 19:05:56
   from 'D:\xampp\htdocs\Giera\sandbox\smarty\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_607b1383718331_27192600',
+  'unifunc' => 'content_60a54574e9a2e2_73137272',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0dc092194f5f9a6fa20f1031cdff7da9ddd64823' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Giera\\sandbox\\smarty\\templates\\index.tpl',
-      1 => 1618678631,
+      1 => 1621443954,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_607b1383718331_27192600 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60a54574e9a2e2_73137272 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <!--
@@ -40,9 +40,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
         <div class="container-fluid">
             <div class="row" id="top">
                 <div class="col-2">
-                    Nick: <?php echo '<?php  ';?>
-if ($_REQUEST["nick"] == $_REQUEST["nick"]) 
-                        echo $_POST['nick']; <?php echo '?>';?>
+                    Nick: <?php echo (($tmp = @$_smarty_tpl->tpl_vars['playerLogin']->value)===null||$tmp==='' ? "Anonim" : $tmp);?>
 
                 </div>
                 <div class="col-2">
