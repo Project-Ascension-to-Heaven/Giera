@@ -48,13 +48,40 @@
     });
     
     Route::add('/login', function(){
-        echo "Strona logowania";
+        //echo "Strona logowania";
+        global $smarty;
+        $smarty->display('login.tpl');
+    }, 'get');
+    Route::add('/login', function(){
+        //echo "przetwarzanie logowania";
+        
+    }, 'post');
+
+    Route::add('/register', function(){
+        global $smarty;
+        $smarty->display('register.tpl');
     });
 
     Route::add('/register', function(){
-        echo "Strona rejestracji";
+        global $smarty;
+        #przetwarzanie rejesteacji
+    }, 'post');
+    
+    Route::add('/upgrade/([a-z]*)/', function($target){
+        global $smarty, $v;
+        #przetwarzanie rejesteacji
+        #pseudokod $target->lvl += 1;
+        echo $target;
+        switch($target) {
+            case 'farm':
+                $v->upgradeBuilding("farmy");
+                $smarty->display('index.tpl');
+            break;
+            #...
+        }
     });
     
+
     Route::run('/');
     exit;
     function function_alert($message) { 

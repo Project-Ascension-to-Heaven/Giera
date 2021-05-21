@@ -3,7 +3,7 @@
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3 text-center">
                 <h1>Zaloguj się</h1>
-                <form action="Interface.php" method="post">
+                <form action="/login" method="post">
                     <input type="hidden" name="action" value="register">
                     <div class="form-group">
                         <label for="login">Adres e-mail:</label>
