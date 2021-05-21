@@ -93,8 +93,8 @@
     
 
     Route::run('/');
-    echo '<pre>';
-    var_dump($gm);
+    //echo '<pre>';
+    //var_dump($gm);
     exit;
     function function_alert($message) { 
         echo "<script>alert('$message');</script>"; 
