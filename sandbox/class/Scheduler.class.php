@@ -45,7 +45,7 @@ class Scheduler
         }
     }
 
-    public function execute($task)
+    public function execute($task) : bool
     {
         /*
         if(count($taskList) > 0)
@@ -78,7 +78,9 @@ class Scheduler
             $this->gm->v->{$functionName}($param);
             $this->log("synchornizuję czas gry do czasu ukończenia zadania", 'info');
             $this->gm->t = $task['timestamp'];
+            
         }
+        return true;
     }
 
     public function log(string $message, string $type)

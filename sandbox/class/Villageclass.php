@@ -303,7 +303,7 @@ class Village
             $this->storage['jedzenie'] += $this->jedzenieGain($deltaTime);
             $this->storage['monety'] += $this->monetyGain($deltaTime);
         }
-        public function upgradeBuilding(string $buildingName) : bool
+        public function upgradeBuilding(string $buildingName) : bool #kolejkuje upgrade
         {
             $currentLVL = $this->buildings[$buildingName];
             $cost = $this->upgradeBuilding[$buildingName][$currentLVL+1];
@@ -320,15 +320,15 @@ class Village
                 $this->storage[$key] -= $value;
             }
             //$this->buildings[$buildingName] += 1; 
-            //$this->log("Ulepszono budynek: ".$this->buildings[$buildingName], "info");
+            $this->log("Dodano do kolejki budynek: ".$buildingName, "info");
             //odwołanie do schedulera
             $this->gm->s->add(time()+60, 'Village', 'scheduleBuildingUpgrade', $buildingName);
             return true;
         }
-        public function scheduleBuildingUpgrade(string $buildingName)
+        public function scheduleBuildingUpgrade(string $buildingName) #wykonuje upgrade z kolejki
         {
             $this->buildings[$buildingName] += 1; 
-            $this->log("Ulepszono budynek: ".$this->buildings[$buildingName], "info");
+            $this->log("Ulepszono budynek: ".$buildingName, "info");
         }
         public function checkBuildingUpgrade(string $buildingName) : bool
         {

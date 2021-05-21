@@ -9,7 +9,7 @@
     session_start();
 
     $smarty = new Smarty();
-    $db = new DB();   
+//    $db = new DB();   
 
     $smarty->setTemplateDir(__DIR__.'/smarty/templates');
     $smarty->setCompileDir(__DIR__.'/smarty/templates_c');
@@ -29,19 +29,21 @@
     $v = $gm->v;
     $gm->sync();
 
+    $smarty->assign('jedzenie', $v->showStorage("jedzenie"));
+    $smarty->assign('drewno', $v->showStorage("drewno"));
+    $smarty->assign('metale', $v->showStorage("metale"));
+    $smarty->assign('monety', $v->showStorage("monety"));
+
+    $smarty->assign('jedzenieGain', $v->showHourGain("jedzenie"));
+    $smarty->assign('drewnoGain', $v->showHourGain("drewno"));
+    $smarty->assign('metaleGain', $v->showHourGain("metale"));
+    $smarty->assign('monetyGain', $v->showHourGain("monety"));
+
+
     Route::add('/', function() {
         global $smarty, $gm, $v;
-        $smarty->assign('jedzenie', $v->showStorage("jedzenie"));
-        $smarty->assign('drewno', $v->showStorage("drewno"));
-        $smarty->assign('metale', $v->showStorage("metale"));
-        $smarty->assign('monety', $v->showStorage("monety"));
-
-        $smarty->assign('jedzenieGain', $v->showHourGain("jedzenie"));
-        $smarty->assign('drewnoGain', $v->showHourGain("drewno"));
-        $smarty->assign('metaleGain', $v->showHourGain("metale"));
-        $smarty->assign('monetyGain', $v->showHourGain("monety"));
-
         $smarty->assign('logArray', $gm->l->getLog());
+
         $smarty->display('index.tpl');
 
         /*echo "Strona główna";*/
@@ -68,13 +70,21 @@
     }, 'post');
     
     Route::add('/upgrade/([a-z]*)/', function($target){
-        global $smarty, $v;
+        global $smarty, $v, $gm;
         #przetwarzanie rejesteacji
         #pseudokod $target->lvl += 1;
         echo $target;
         switch($target) {
             case 'farm':
                 $v->upgradeBuilding("farmy");
+                $smarty->assign('logArray', $gm->l->getLog());
+
+                $smarty->display('index.tpl');
+            break;
+            case 'tartak':
+                $v->upgradeBuilding("tartak");
+                $smarty->assign('logArray', $gm->l->getLog());
+
                 $smarty->display('index.tpl');
             break;
             #...
@@ -83,6 +93,8 @@
     
 
     Route::run('/');
+    echo '<pre>';
+    var_dump($gm);
     exit;
     function function_alert($message) { 
         echo "<script>alert('$message');</script>"; 

@@ -9,4 +9,4 @@
     <link rel="stylesheet" href="style.css">
     <title>{$title|default:"Ascension to Heaven"}</title>
 </head>
-<body style="background-color: #3d3d3d;">
+<body> <!--style="background-color: #3d3d3d;"-->
