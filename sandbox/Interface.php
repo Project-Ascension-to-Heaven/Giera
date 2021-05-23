@@ -9,7 +9,7 @@
     session_start();
 
     $smarty = new Smarty();
-//    $db = new DB();   
+    $db = new DB();   
 
     $smarty->setTemplateDir(__DIR__.'/smarty/templates');
     $smarty->setCompileDir(__DIR__.'/smarty/templates_c');
@@ -73,9 +73,9 @@
         global $smarty, $v, $gm;
         #przetwarzanie rejesteacji
         #pseudokod $target->lvl += 1;
-        echo $target;
+        echo $target; // <-- for debug 
         switch($target) {
-            case 'farm':
+            case 'farmy':
                 $v->upgradeBuilding("farmy");
                 $smarty->assign('logArray', $gm->l->getLog());
 
@@ -83,6 +83,18 @@
             break;
             case 'tartak':
                 $v->upgradeBuilding("tartak");
+                $smarty->assign('logArray', $gm->l->getLog());
+
+                $smarty->display('index.tpl');
+            break;
+            case 'kopalnia':
+                $v->upgradeBuilding("kopalniaMetali");
+                $smarty->assign('logArray', $gm->l->getLog());
+
+                $smarty->display('index.tpl');
+            break;
+            case 'skarbowka':
+                $v->upgradeBuilding("skarbowka");
                 $smarty->assign('logArray', $gm->l->getLog());
 
                 $smarty->display('index.tpl');
@@ -96,6 +108,9 @@
     //echo '<pre>';
     //var_dump($gm);
     exit;
+    
+    // ---------------------------------------------- Niżej stare rzeczy -----------------------------------------------------------
+    
     function function_alert($message) { 
         echo "<script>alert('$message');</script>"; 
     } 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-19 18:54:28
+/* Smarty version 3.1.39, created on 2021-05-23 19:00:53
   from 'D:\xampp\htdocs\Giera\sandbox\smarty\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60a542c437c4a1_43942375',
+  'unifunc' => 'content_60aa8a451991d2_75484257',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3b0d0b88ee2f6a6997520c5af134a40124c9e4c0' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Giera\\sandbox\\smarty\\templates\\header.tpl',
-      1 => 1621443265,
+      1 => 1621709212,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60a542c437c4a1_43942375 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60aa8a451991d2_75484257 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -33,5 +33,5 @@ function content_60a542c437c4a1_43942375 (Smarty_Internal_Template $_smarty_tpl)
     <title><?php echo (($tmp = @$_smarty_tpl->tpl_vars['title']->value)===null||$tmp==='' ? "Ascension to Heaven" : $tmp);?>
 </title>
 </head>
-<body style="background-color: #3d3d3d;"><?php }
+<body> <!--style="background-color: #3d3d3d;"--><?php }
 }

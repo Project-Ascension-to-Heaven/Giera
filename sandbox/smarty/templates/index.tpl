@@ -31,19 +31,19 @@
                 <div class="col-2">
                     <h2>Przychód:</h2> <br>
                     Jedzeniem zysk/h: {$jedzenieGain} <br>
-                    <a href="Interface.php?action=upgradeBuilding&building=farmy">
+                    <a href="/upgrade/farmy/">
                         <button>Rozbuduj Farmy</button>
                     </a><br>
                     Drewno, zysk/h: {$drewnoGain} <br>
-                    <a href="Interface.php?action=upgradeBuilding&building=tartak">
+                    <a href="/upgrade/tartak/">
                         <button>Rozbuduj Tartak</button>
                     </a><br>
                     Metale, zysk/h: {$metaleGain} <br>
-                    <a href="Interface.php?action=upgradeBuilding&building=kopalniaMetali">
+                    <a href="/upgrade/kopalnia/">
                         <button>Rozbuduj Kopalnie</button>
                     </a><br>
                     Monety, zysk/h: {$monetyGain} <br>
-                    <a href="Interface.php?action=upgradeBuilding&building=skarbowka">
+                    <a href="/upgrade/skarbowka/">
                         <button>Rozbuduj Skarbówkę</button>
                     </a><br>
                 </div>
