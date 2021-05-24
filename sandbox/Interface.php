@@ -81,7 +81,9 @@
         #przetwarzanie rejesteacji
         #pseudokod $target->lvl += 1;
         //echo $target; // <-- for debug 
-        switch($target) {
+        echo "<button onclick=\"goBack()\">Go Back</button>"; //tu jest przycisk do tego co tak chujowo wygląda na dole
+        switch($target) 
+        {
             case 'farmy':
                 $v->upgradeBuilding("farmy");
                 $smarty->assign('logArray', $gm->l->getLog());
@@ -114,6 +116,13 @@
     Route::run('/');
     //echo '<pre>';
     //var_dump($gm);
+
+    echo "<script>";
+    echo "function goBack() {";
+    echo "    window.history.back();"; //to jest tak chujowe że nie mogę na to patrzeć
+    echo "}";
+    echo "</script>";
+
     exit;
     
     // ---------------------------------------------- Niżej stare rzeczy -----------------------------------------------------------

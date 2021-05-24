@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-1">
                     Kryształy: 21 <!-- nie oszukujmy się, nie potrzebna jest nam waluta premium -->
-                </div>              <!-- no chyba że ma ktoś zamiar implementować sklep który działa, ja z chęcią popatrzę -->
+                </div>              <!-- no chyba że ma ktoś zamiar implementować sklep który będzie działał, ja z chęcią popatrzę -->
             </div>
             <div class="row">
                 <div class="col-10" id="lewo">

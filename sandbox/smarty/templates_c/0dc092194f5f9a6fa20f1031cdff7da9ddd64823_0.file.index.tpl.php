@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-24 16:25:32
+/* Smarty version 3.1.39, created on 2021-05-24 17:07:44
   from 'D:\xampp\htdocs\Giera\sandbox\smarty\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60abb75c40d921_77054237',
+  'unifunc' => 'content_60abc140309158_30915576',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0dc092194f5f9a6fa20f1031cdff7da9ddd64823' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Giera\\sandbox\\smarty\\templates\\index.tpl',
-      1 => 1621866299,
+      1 => 1621868649,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60abb75c40d921_77054237 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60abc140309158_30915576 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -54,7 +54,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                 </div>
                 <div class="col-1">
                     Kryształy: 21 <!-- nie oszukujmy się, nie potrzebna jest nam waluta premium -->
-                </div>              <!-- no chyba że ma ktoś zamiar implementować sklep który działa, ja z chęcią popatrzę -->
+                </div>              <!-- no chyba że ma ktoś zamiar implementować sklep który będzie działał, ja z chęcią popatrzę -->
             </div>
             <div class="row">
                 <div class="col-10" id="lewo">
