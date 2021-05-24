@@ -40,7 +40,7 @@ class GameManager
 
     public function newArmy($spearmen, $archers, $cavalry, $location) 
     {
-        $this->l->log("tworzę nową armię", "gamemanager");
+        $this->l->log("Tworzę nową armię", "gamemanager");
         foreach($this->a as &$otherArmy)
         {
             if($otherArmy->location == $location) 
