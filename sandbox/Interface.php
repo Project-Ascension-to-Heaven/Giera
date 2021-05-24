@@ -109,7 +109,7 @@
 
                 $smarty->display('index.tpl');
             break;
-            case 'townHall':
+            case 'townhall':
                 $v->upgradeBuilding("townHall");
                 $smarty->assign('logArray', $gm->l->getLog());
 

@@ -32,7 +32,7 @@
                 <div class="col-2">
                     <h2>Budynki:</h2> <br>
                     Town Hall poziom: {$townHallLvl} <br>
-                    <a href="/upgrade/townHall/">
+                    <a href="/upgrade/townhall/">
                         <button>Rozbuduj Town Hall</button>
                     </a><br><br>
                     Farmy poziom: {$farmyLvl} <br>

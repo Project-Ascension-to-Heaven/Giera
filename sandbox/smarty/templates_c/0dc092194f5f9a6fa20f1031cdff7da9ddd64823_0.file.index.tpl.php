@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-24 17:42:39
+/* Smarty version 3.1.39, created on 2021-05-24 18:01:08
   from 'D:\xampp\htdocs\Giera\sandbox\smarty\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60abc96fd4cea7_96391337',
+  'unifunc' => 'content_60abcdc42f4e93_42780417',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0dc092194f5f9a6fa20f1031cdff7da9ddd64823' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Giera\\sandbox\\smarty\\templates\\index.tpl',
-      1 => 1621870926,
+      1 => 1621872065,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60abc96fd4cea7_96391337 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60abcdc42f4e93_42780417 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -63,6 +63,11 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                 </div>
                 <div class="col-2">
                     <h2>Budynki:</h2> <br>
+                    Town Hall poziom: <?php echo $_smarty_tpl->tpl_vars['townHallLvl']->value;?>
+ <br>
+                    <a href="/upgrade/townhall/">
+                        <button>Rozbuduj Town Hall</button>
+                    </a><br><br>
                     Farmy poziom: <?php echo $_smarty_tpl->tpl_vars['farmyLvl']->value;?>
  <br>
                     Jedzenie zysk/h: <?php echo $_smarty_tpl->tpl_vars['jedzenieGain']->value;?>
