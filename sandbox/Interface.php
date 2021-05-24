@@ -46,6 +46,7 @@
     $smarty->assign('tartakLvl', $v->buildingLVL("tartak"));
     $smarty->assign('kopalniaLvl', $v->buildingLVL("kopalniaMetali"));
     $smarty->assign('skarbowkaLvl', $v->buildingLVL("skarbowka"));
+    $smarty->assign('townHallLvl', $v->buildingLVL("townHall"));
 
     Route::add('/', function() {
         global $smarty, $gm, $v;
@@ -104,6 +105,12 @@
             break;
             case 'skarbowka':
                 $v->upgradeBuilding("skarbowka");
+                $smarty->assign('logArray', $gm->l->getLog());
+
+                $smarty->display('index.tpl');
+            break;
+            case 'townHall':
+                $v->upgradeBuilding("townHall");
                 $smarty->assign('logArray', $gm->l->getLog());
 
                 $smarty->display('index.tpl');
