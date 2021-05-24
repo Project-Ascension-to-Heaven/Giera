@@ -7,7 +7,7 @@ Nie wiem co się dzieję kurwa mać, ale działa więc jest masno fest. - Snaksi
 <br>Wyróżnienia: 
 <br>-AndrzejKebab = próbował updatować stary login screen, okazało się że się nie da oraz pomógł przy VillageClass.
 <br>-Danio553 = zrobił stary login screen w trakcie przerwy zimowej kiedy nikt inny nawet nie myślał o tym projekcie.
-<br>-XXAssDestroyerXX = coś tam próbował, miał zrobić rooting nie zrobił, no nie wiem jak go kurwa wybronić.
+<br>-XXAssDestroyerXX = wyzywa mnie :'(
 
 
 <br>![image](https://pbs.twimg.com/profile_images/1391737787087532034/F_1EwMfn_400x400.jpg) Innocent w kasku #JedzieszWujo
