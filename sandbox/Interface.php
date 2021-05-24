@@ -14,7 +14,7 @@
     $smarty->setTemplateDir(__DIR__.'/smarty/templates');
     $smarty->setCompileDir(__DIR__.'/smarty/templates_c');
     $smarty->setCacheDir(__DIR__.'/smarty/cache');
-    $smarty->setConfigDir(__DIR__.'/smarty/confing');
+    $smarty->setConfigDir(__DIR__.'/smarty/confings');
     $smarty->assign('config', array('date' => '%d.%m.%Y', 'time' => '%H:%M:%S', 'datetime' => '%d.%m.%Y %H:%M:%S'));
 
     if(!isset($_SESSION['gm']))
@@ -28,17 +28,24 @@
     }
     $v = $gm->v;
     $gm->sync();
-
+    
+    // to musi być żeby w index.tpl działały zmienne czyli np. {$jedzenie}
     $smarty->assign('jedzenie', $v->showStorage("jedzenie"));
     $smarty->assign('drewno', $v->showStorage("drewno"));
     $smarty->assign('metale', $v->showStorage("metale"));
     $smarty->assign('monety', $v->showStorage("monety"));
 
+    // to musi być żeby w index.tpl działały zmienne czyli np. {$jedzenieGain}
     $smarty->assign('jedzenieGain', $v->showHourGain("jedzenie"));
     $smarty->assign('drewnoGain', $v->showHourGain("drewno"));
     $smarty->assign('metaleGain', $v->showHourGain("metale"));
     $smarty->assign('monetyGain', $v->showHourGain("monety"));
 
+    // to już wiesz co żeby wiesz gdzie działało
+    $smarty->assign('farmyLvl', $v->buildingLVL("farmy"));
+    $smarty->assign('tartakLvl', $v->buildingLVL("tartak"));
+    $smarty->assign('kopalniaLvl', $v->buildingLVL("kopalniaMetali"));
+    $smarty->assign('skarbowkaLvl', $v->buildingLVL("skarbowka"));
 
     Route::add('/', function() {
         global $smarty, $gm, $v;
@@ -73,7 +80,7 @@
         global $smarty, $v, $gm;
         #przetwarzanie rejesteacji
         #pseudokod $target->lvl += 1;
-        echo $target; // <-- for debug 
+        //echo $target; // <-- for debug 
         switch($target) {
             case 'farmy':
                 $v->upgradeBuilding("farmy");

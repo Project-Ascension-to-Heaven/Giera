@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-23 19:05:39
+/* Smarty version 3.1.39, created on 2021-05-24 16:25:32
   from 'D:\xampp\htdocs\Giera\sandbox\smarty\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60aa8b63e07195_78941465',
+  'unifunc' => 'content_60abb75c40d921_77054237',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0dc092194f5f9a6fa20f1031cdff7da9ddd64823' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Giera\\sandbox\\smarty\\templates\\index.tpl',
-      1 => 1621789537,
+      1 => 1621866299,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60aa8b63e07195_78941465 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60abb75c40d921_77054237 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -53,35 +53,43 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
                 </div>
                 <div class="col-1">
-                    Kryształy: 21
-                </div>
+                    Kryształy: 21 <!-- nie oszukujmy się, nie potrzebna jest nam waluta premium -->
+                </div>              <!-- no chyba że ma ktoś zamiar implementować sklep który działa, ja z chęcią popatrzę -->
             </div>
             <div class="row">
                 <div class="col-10" id="lewo">
                     <img src="projekt.png" id="obrazTlo">
                 </div>
                 <div class="col-2">
-                    <h2>Przychód:</h2> <br>
-                    Jedzeniem zysk/h: <?php echo $_smarty_tpl->tpl_vars['jedzenieGain']->value;?>
+                    <h2>Budynki:</h2> <br>
+                    Farmy poziom: <?php echo $_smarty_tpl->tpl_vars['farmyLvl']->value;?>
+ <br>
+                    Jedzenie zysk/h: <?php echo $_smarty_tpl->tpl_vars['jedzenieGain']->value;?>
  <br>
                     <a href="/upgrade/farmy/">
                         <button>Rozbuduj Farmy</button>
-                    </a><br>
+                    </a><br><br>
+                    Tartak poziom: <?php echo $_smarty_tpl->tpl_vars['tartakLvl']->value;?>
+ <br>
                     Drewno, zysk/h: <?php echo $_smarty_tpl->tpl_vars['drewnoGain']->value;?>
  <br>
                     <a href="/upgrade/tartak/">
                         <button>Rozbuduj Tartak</button>
-                    </a><br>
+                    </a><br><br>
+                    Kopalnie metali poziom: <?php echo $_smarty_tpl->tpl_vars['kopalniaLvl']->value;?>
+ <br>
                     Metale, zysk/h: <?php echo $_smarty_tpl->tpl_vars['metaleGain']->value;?>
  <br>
                     <a href="/upgrade/kopalnia/">
                         <button>Rozbuduj Kopalnie</button>
-                    </a><br>
+                    </a><br><br>
+                    Skarbówka poziom: <?php echo $_smarty_tpl->tpl_vars['skarbowkaLvl']->value;?>
+ <br>
                     Monety, zysk/h: <?php echo $_smarty_tpl->tpl_vars['monetyGain']->value;?>
  <br>
                     <a href="/upgrade/skarbowka/">
                         <button>Rozbuduj Skarbówkę</button>
-                    </a><br>
+                    </a><br><br>
                 </div>
             </div>
         
