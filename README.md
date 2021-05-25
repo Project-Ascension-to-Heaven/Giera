@@ -7,7 +7,7 @@ Nie wiem co się dzieję kurwa mać, ale działa więc jest masno fest. - Snaksi
 <br>Wyróżnienia: 
 <br>-AndrzejKebab = próbował updatować stary login screen, okazało się że się nie da oraz pomógł przy VillageClass.
 <br>-Danio553 = zrobił stary login screen w trakcie przerwy zimowej kiedy nikt inny nawet nie myślał o tym projekcie oraz zaimplementował armię.
-<br>-XXAssDestroyerXX = próbował naprawić sesje, mini hotfixy i alertbox po upgradach budynków.
+<br>-XXAssDestroyerXX = próbował naprawić sesje, mini hotfixy i alertbox po upgradach budynków. Opracował popup.
 
 xampp to jebane gówno -Snaksiu i AndzrzejKebab, dalej nie działa nam apache, wyjebał się.
 
