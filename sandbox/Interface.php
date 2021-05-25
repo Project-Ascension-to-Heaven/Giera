@@ -124,6 +124,7 @@
 
     Route::add('/newUnit', function () {
         global $smarty, $v, $gm;
+        echo "<button onclick=\"goBack()\">Go Back</button>";
         if (isset($_REQUEST['infantry'])) //kliknelismy wyszkol przy włócznikach
         {
             $count = $_REQUEST['infantry']; //ilość nowych włóczników
