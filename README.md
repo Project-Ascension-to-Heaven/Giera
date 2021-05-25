@@ -2,7 +2,7 @@
 Nie wiem co się dzieję kurwa mać, ale działa więc jest masno fest. - Snaksiu
 <br>Główni contributorzy: 
 <br>-kubo0 = smarty, rooting, hotfixy, nowe upgrady budynków i ogólnie cały szkielet gry. 
-<br>-Snaksiu = cały VillageClass(surowce, zarobki, budynki itd.), stare jak i nowe upgrady budynków, memowe commity i masa hotfiów.
+<br>-Snaksiu = cały VillageClass(surowce, zarobki, budynki itd.), stare jak i nowe upgrady budynków, memowe commity i masa hotfiów. Profesjonalny napierdalacz commitów, kocha plik README.md
 <br>Grafika: Moyaiii
 <br>Wyróżnienia: 
 <br>-AndrzejKebab = próbował updatować stary login screen, okazało się że się nie da oraz pomógł przy VillageClass.
