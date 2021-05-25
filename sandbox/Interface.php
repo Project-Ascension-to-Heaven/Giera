@@ -1,6 +1,6 @@
 <!--<pre>-->
 <?php
-
+    
     require_once(__DIR__.'/smarty/libs/Smarty.class.php');
     require_once(__DIR__.'/class/DB.class.php');
     require_once(__DIR__.'/class/GameManager.class.php');
@@ -91,7 +91,7 @@
             case 'farmy':
                 $v->upgradeBuilding("farmy");
                 $smarty->assign('logArray', $gm->l->getLog());
-
+                
                 $smarty->display('index.tpl');
             break;
             case 'tartak':

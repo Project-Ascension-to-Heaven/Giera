@@ -33,49 +33,41 @@ class Village
                         'drewno' => 200,
                         'metale' => 100,
                         'monety' => 80,
-
                     ),
                     4 => array(
                         'drewno' => 350,
                         'metale' => 150,
                         'monety' => 120,
-
                     ),
                     5 => array(
                         'drewno' => 500,
                         'metale' => 200,
                         'monety' => 180,
-
                     ),
                     6 => array(
                         'drewno' => 750,
                         'metale' => 300,
                         'monety' => 200,
-
                     ),
                     7 => array(
                         'drewno' => 900,
                         'metale' => 450,
                         'monety' => 250,
-
                     ),
                     8 => array(
                         'drewno' => 1000,
                         'metale' => 600,
                         'monety' => 350,
-
                     ),
                     9 => array(
                         'drewno' => 1500,
                         'metale' => 900,
                         'monety' => 450,
-
                     ),                    
                     10 => array(
                         'drewno' => 2500,
                         'metale' => 1200,
                         'monety' => 700,
-
                     ),
                 ),
                 'kopalniaMetali' => array(
@@ -86,49 +78,41 @@ class Village
                         'drewno' => 300,
                         'metale' => 150,
                         'monety' => 100,
-
                     ),
                     4 => array(
                         'drewno' => 450,
                         'metale' => 200,
                         'monety' => 150,
-
                     ),
                     5 => array(
                         'drewno' => 600,
                         'metale' => 300,
                         'monety' => 300,
-
                     ),
                     6 => array(
                         'drewno' => 750,
                         'metale' => 450,
                         'monety' => 350,
-
                     ),
                     7 => array(
                         'drewno' => 900,
                         'metale' => 700,
                         'monety' => 500,
-
                     ),
                     8 => array(
                         'drewno' => 1200,
                         'metale' => 900,
                         'monety' => 700,
-
                     ),
                     9 => array(
                         'drewno' => 1800,
                         'metale' => 1100,
                         'monety' => 850,
-
                     ),
                     10 => array(
                         'drewno' => 2500,
                         'metale' => 1500,
                         'monety' => 1000,
-
                     ),
                 ),
                 'farmy' => array(
@@ -146,43 +130,36 @@ class Village
                         'drewno' => 350,
                         'metale' => 450,
                         'monety' => 300,
-                        'townHall' => 2,
                     ),
                     5 => array(
                         'drewno' => 500,
                         'metale' => 600,
                         'monety' => 400,
-
                     ),
                     6 => array(
                         'drewno' => 750,
                         'metale' => 700,
                         'monety' => 550,
-
                     ),
                     7 => array(
                         'drewno' => 900,
                         'metale' => 850,
                         'monety' => 700,
-
                     ),
                     8 => array(
                         'drewno' => 1200,
                         'metale' => 950,
                         'monety' => 850,
-
                     ),
                     9 => array(
                         'drewno' => 1700,
                         'metale' => 1200,
                         'monety' => 1000,
-
                     ),
                     10 => array(
                         'drewno' => 2300,
                         'metale' => 1550,
                         'monety' => 1200,
-
                     ),
                 ),
                 'skarbowka' => array(
@@ -195,37 +172,31 @@ class Village
                         'drewno' => 400,
                         'metale' => 140,
                         'jedznie' => 240,
-
                     ),
                     4 => array(
                         'drewno' => 550,
                         'metale' => 250,
                         'jedznie' => 300,
-
                     ),
                     5 => array(
                         'drewno' => 750,
                         'metale' => 400,
                         'jedznie' => 450,
-
                     ),
                     6 => array(
                         'drewno' => 900,
                         'metale' => 550,
                         'jedznie' => 550,
-
                     ),
                     7 => array(
                         'drewno' => 1100,
                         'metale' => 650,
                         'jedznie' => 700,
-
                     ),
                     8 => array(
                         'drewno' => 1400,
                         'metale' => 750,
                         'jedznie' => 850,
-
                     ),
                     9 => array(
                         'drewno' => 1800,
