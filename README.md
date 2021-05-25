@@ -10,6 +10,7 @@ Nie wiem co się dzieję kurwa mać, ale działa więc jest masno fest. - Snaksi
 <br>-XXAssDestroyerXX = próbował naprawić sesje, mini hotfixy i alertbox po upgradach budynków. Opracował popup.
 
 xampp to jebane gówno -Snaksiu i AndzrzejKebab, dalej nie działa nam apache, wyjebał się.
+SETNY COMMIT
 
 
 <br>![image](https://pbs.twimg.com/profile_images/1391737787087532034/F_1EwMfn_400x400.jpg) Innocent w kasku #JedzieszWujo
