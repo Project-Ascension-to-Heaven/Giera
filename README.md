@@ -9,7 +9,7 @@ Nie wiem co się dzieję kurwa mać, ale działa więc jest masno fest. - Snaksi
 <br>-Danio553 = zrobił stary login screen w trakcie przerwy zimowej kiedy nikt inny nawet nie myślał o tym projekcie oraz zaimplementował armię.
 <br>-XXAssDestroyerXX = próbował naprawić sesje, mini hotfixy i alertbox po upgradach budynków.
 
-xampp to jebane gówno -Snaksiu i AndzrzejKebab, dalej nie działa nam apache wyjebał się.
+xampp to jebane gówno -Snaksiu i AndzrzejKebab, dalej nie działa nam apache, wyjebał się.
 
 
 <br>![image](https://pbs.twimg.com/profile_images/1391737787087532034/F_1EwMfn_400x400.jpg) Innocent w kasku #JedzieszWujo
