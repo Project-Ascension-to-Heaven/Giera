@@ -85,7 +85,11 @@
         #przetwarzanie rejesteacji
         #pseudokod $target->lvl += 1;
         //echo $target; // <-- for debug 
-        echo "<button onclick=\"goBack()\">Go Back</button>"; //tu jest przycisk do tego co tak chujowo wygląda na dole
+        //echo "<button onclick=\"goBack()\">Go Back</button>"; //tu jest przycisk do tego co tak chujowo wygląda na dole
+        echo "<script language='javascript'>";
+        echo 'alert("Budynek został dodany do kolejki.");';
+        echo 'window.history.back();';
+        echo "</script>";
         switch($target) 
         {
             case 'farmy':
@@ -124,7 +128,10 @@
 
     Route::add('/newUnit', function () {
         global $smarty, $v, $gm;
-        echo "<button onclick=\"goBack()\">Go Back</button>";
+        echo "<script language='javascript'>";
+        echo 'alert("Jednostka/i zostały wyszkolone.");';
+        echo 'window.history.back();';
+        echo "</script>";
         if (isset($_REQUEST['infantry'])) //kliknelismy wyszkol przy włócznikach
         {
             $count = $_REQUEST['infantry']; //ilość nowych włóczników
