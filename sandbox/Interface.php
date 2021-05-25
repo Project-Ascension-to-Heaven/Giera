@@ -47,6 +47,8 @@
     $smarty->assign('kopalniaLvl', $v->buildingLVL("kopalniaMetali"));
     $smarty->assign('skarbowkaLvl', $v->buildingLVL("skarbowka"));
     $smarty->assign('townHallLvl', $v->buildingLVL("townHall"));
+    
+    $smarty->assign('townSquare', "townSquare.tpl");
 
     Route::add('/', function() {
         global $smarty, $gm, $v;
@@ -118,6 +120,13 @@
             #...
         }
     });
+
+    //Route::add('/townsquare', function () {
+    //    global $smarty, $v, $gm;
+    //    $smarty->assign('armyList', $gm->getArmyList());
+    //    $smarty->assign('mainContent', "townSquare.tpl");
+    //    $smarty->display('index.tpl');
+    //});
     
 
     Route::run('/');

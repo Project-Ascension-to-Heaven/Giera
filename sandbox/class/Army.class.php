@@ -4,13 +4,13 @@ class Army {
     public $targetLocation; 
     public $targetETA; 
 
-    public $spearmen;   
+    public $infantry;   
     public $archers;    
     public $cavalry;
 
     public function __construct ($s, $a, $c, $l)
     {
-        $this->spearmen = $s;
+        $this->infantry = $i;
         $this->archers = $a;
         $this->cavalry = $c;
         $this->location = $l;

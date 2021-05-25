@@ -38,20 +38,20 @@ class GameManager
     }
 
 
-    public function newArmy($spearmen, $archers, $cavalry, $location) 
+    public function newArmy($infantry, $archers, $cavalry, $location) 
     {
         $this->l->log("Tworzę nową armię", "gamemanager");
         foreach($this->a as &$otherArmy)
         {
             if($otherArmy->location == $location) 
             {
-                $otherArmy->spearmen += $spearmen;
+                $otherArmy->infantry += $infantry;
                 $otherArmy->archers += $archers;
                 $otherArmy->cavalry += $cavalry;
                 return;
             }
         }
-        $army = new Army($spearmen, $archers, $cavalry, $location);
+        $army = new Army($infantry, $archers, $cavalry, $location);
         array_push($this->a, $army);
     }
     public function getArmyList()

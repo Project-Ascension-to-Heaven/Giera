@@ -55,6 +55,7 @@
                     <a href="/upgrade/skarbowka/">
                         <button>Rozbuduj Skarbówkę</button>
                     </a><br><br>
+                    {include file="townSquare.tpl"} 
                 </div>
             </div>
         

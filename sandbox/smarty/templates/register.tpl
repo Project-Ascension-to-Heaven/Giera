@@ -15,8 +15,9 @@
                     </div>
                     <button class="btn btn-primary" type="submit">Zarejestruj się</button>
                 </form>
-              
-                
+                <a href="/login">
+                    <button class="btn btn-primary">Zaloguj się</button>
+                </a>           
             </div>
         </div>
     </div>
