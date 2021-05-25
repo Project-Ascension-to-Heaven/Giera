@@ -1,29 +1,30 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-24 18:01:08
+/* Smarty version 3.1.39, created on 2021-05-25 19:01:09
   from 'D:\xampp\htdocs\Giera\sandbox\smarty\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60abcdc42f4e93_42780417',
+  'unifunc' => 'content_60ad2d559ba5b2_70386008',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0dc092194f5f9a6fa20f1031cdff7da9ddd64823' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Giera\\sandbox\\smarty\\templates\\index.tpl',
-      1 => 1621872065,
+      1 => 1621962067,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:header.tpl' => 1,
+    'file:townSquare.tpl' => 1,
     'file:log.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60abcdc42f4e93_42780417 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60ad2d559ba5b2_70386008 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -95,17 +96,25 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
  <br>
                     <a href="/upgrade/skarbowka/">
                         <button>Rozbuduj Skarbówkę</button>
-                    </a><br><br>
+                    </a><br><br> 
                 </div>
             </div>
-        
-    <footer class="row mt-3">
-        <div class="col-12">
-            <?php $_smarty_tpl->_subTemplateRender("file:log.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+            <div class="row">
+                <div class="col-2" id="bottom-left"></div>
+                <div class="col-8" id="bottom-centre">
+                    <?php $_smarty_tpl->_subTemplateRender("file:townSquare.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-        </div>
-    </footer>
-    </div><!-- /container-fluid -->
+                </div>
+                <div class="col-2" id="bottom-left"></div>
+            </div>
+        
+            <footer class="row mt-3">
+                <div class="col-12">
+                    <?php $_smarty_tpl->_subTemplateRender("file:log.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+                </div>
+            </footer>
+        </div><!-- /container-fluid -->
 
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }

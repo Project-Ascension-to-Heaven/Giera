@@ -54,16 +54,22 @@
                     Monety, zysk/h: {$monetyGain} <br>
                     <a href="/upgrade/skarbowka/">
                         <button>Rozbuduj Skarbówkę</button>
-                    </a><br><br>
-                    {include file="townSquare.tpl"} 
+                    </a><br><br> 
                 </div>
             </div>
+            <div class="row">
+                <div class="col-2" id="bottom-left"></div>
+                <div class="col-8" id="bottom-centre">
+                    {include file="townSquare.tpl"}
+                </div>
+                <div class="col-2" id="bottom-left"></div>
+            </div>
         
-    <footer class="row mt-3">
-        <div class="col-12">
-            {include file="log.tpl"}
-        </div>
-    </footer>
-    </div><!-- /container-fluid -->
+            <footer class="row mt-3">
+                <div class="col-12">
+                    {include file="log.tpl"}
+                </div>
+            </footer>
+        </div><!-- /container-fluid -->
 
 {include file="footer.tpl"}

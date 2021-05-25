@@ -8,7 +8,7 @@ class Army {
     public $archers;    
     public $cavalry;
 
-    public function __construct ($s, $a, $c, $l)
+    public function __construct ($i, $a, $c, $l)
     {
         $this->infantry = $i;
         $this->archers = $a;

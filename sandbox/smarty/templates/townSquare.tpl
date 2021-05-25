@@ -7,12 +7,12 @@
                 <th>Trenuj</th>
             </tr>
             <tr>
-                <td>Włócznicy</td>
+                <td>Piechota</td>
                 <td>0</td>
                 <form method="post" action="/newUnit">
                     
                     <td><input type="number" name="infantry" id="infantry"></td>
-                    <td><button type="submit">Wyszkol</button></td>
+                    <td><button type="submit">Wytrenuj</button></td>
                 </form>
             </tr>
             <tr>
@@ -21,7 +21,7 @@
                 <form method="post" action="/newUnit">
                     
                     <td><input type="number" name="archer" id="archer"></td>
-                    <td><button type="submit">Wyszkol</button></td>
+                    <td><button type="submit">Wytrenuj</button></td>
                 </form>
             </tr>
             <tr>
@@ -30,7 +30,7 @@
                 <form method="post" action="/newUnit">
                     
                     <td><input type="number" name="cavalry" id="cavalry"></td>
-                    <td><button type="submit">Wyszkol</button></td>
+                    <td><button type="submit">Wytrenuj</button></td>
                 </form>
             </tr>
         </table>

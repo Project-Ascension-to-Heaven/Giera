@@ -48,6 +48,7 @@
     $smarty->assign('skarbowkaLvl', $v->buildingLVL("skarbowka"));
     $smarty->assign('townHallLvl', $v->buildingLVL("townHall"));
     
+    $smarty->assign('armyList', $gm->getArmyList());
     $smarty->assign('townSquare', "townSquare.tpl");
 
     Route::add('/', function() {
@@ -121,12 +122,24 @@
         }
     });
 
-    //Route::add('/townsquare', function () {
-    //    global $smarty, $v, $gm;
-    //    $smarty->assign('armyList', $gm->getArmyList());
-    //    $smarty->assign('mainContent', "townSquare.tpl");
-    //    $smarty->display('index.tpl');
-    //});
+    Route::add('/newUnit', function () {
+        global $smarty, $v, $gm;
+        if (isset($_REQUEST['infantry'])) //kliknelismy wyszkol przy włócznikach
+        {
+            $count = $_REQUEST['infantry']; //ilość nowych włóczników
+            $gm->newArmy($count, 0, 0, $v); //tworz nowy oddział włóczników w wiosce w ilosci $count;
+        }
+        if (isset($_REQUEST['archer'])) {
+            $count = $_REQUEST['archer'];
+            $gm->newArmy(0, $count, 0, $v);
+        }
+        if (isset($_REQUEST['cavalry'])) {
+            $count = $_REQUEST['cavalry'];
+            $gm->newArmy(0, 0, $count, $v);
+        }
+        $smarty->assign('logArray', $gm->l->getLog());
+        $smarty->display('index.tpl');
+    }, 'post');
     
 
     Route::run('/');
