@@ -171,42 +171,42 @@ class Village
                     3 => array(
                         'drewno' => 400,
                         'metale' => 140,
-                        'jedznie' => 240,
+                        'jedzenie' => 240,
                     ),
                     4 => array(
                         'drewno' => 550,
                         'metale' => 250,
-                        'jedznie' => 300,
+                        'jedzenie' => 300,
                     ),
                     5 => array(
                         'drewno' => 750,
                         'metale' => 400,
-                        'jedznie' => 450,
+                        'jedzenie' => 450,
                     ),
                     6 => array(
                         'drewno' => 900,
                         'metale' => 550,
-                        'jedznie' => 550,
+                        'jedzenie' => 550,
                     ),
                     7 => array(
                         'drewno' => 1100,
                         'metale' => 650,
-                        'jedznie' => 700,
+                        'jedzenie' => 700,
                     ),
                     8 => array(
                         'drewno' => 1400,
                         'metale' => 750,
-                        'jedznie' => 850,
+                        'jedzenie' => 850,
                     ),
                     9 => array(
                         'drewno' => 1800,
                         'metale' => 900,
-                        'jedznie' => 1000,
+                        'jedzenie' => 1000,
                     ),
                     10 => array(
                         'drewno' => 2400,
                         'metale' => 1200,
-                        'jedznie' => 1200,
+                        'jedzenie' => 1200,
                     ),
                 ),
                 'townHall' => array(
@@ -229,6 +229,31 @@ class Village
                         'drewno' => 2400,
                         'monety' => 3200,
                         'jedzenie' => 2400,
+                    ),
+                    6 => array(
+                        'drewno' => 4800,
+                        'monety' => 6400,
+                        'jedzenie' => 4800,
+                    ),
+                    7 => array(
+                        'drewno' => 9600,
+                        'monety' => 12800,
+                        'jedzenie' => 9600,
+                    ),
+                    8 => array(
+                        'drewno' => 19200,
+                        'monety' => 25600,
+                        'jedzenie' => 19200,
+                    ),
+                    9 => array(
+                        'drewno' => 38400,
+                        'monety' => 51200,
+                        'jedzenie' => 38400,
+                    ),
+                    10 => array(
+                        'drewno' => 76800,
+                        'monety' => 102400,
+                        'jedzenie' => 76800,
                     )
                 ),
 
@@ -278,18 +303,26 @@ class Village
         {
             $currentLVL = $this->buildings[$buildingName];
             $cost = $this->upgradeBuilding[$buildingName][$currentLVL+1];
-            foreach ($cost as $key => $value) {
+            if($currentLVL >= 10)
+            {
+                $this->log("Nie udało się ulepszyć budynku - osiągnięto maksymalny poziom budynku: ".$buildingName, "warning");
+                return false;
+            }else
+            {
+                foreach ($cost as $key => $value) {
 
-                if($value > $this->storage[$key])
-                {
-                    $this->log("Nie udało się ulepszyć budynku - brak surowca: ".$key, "warning");
-                    return false;
+                    if($value > $this->storage[$key])
+                    {
+                        $this->log("Nie udało się ulepszyć budynku - brak surowca: ".$key, "warning");
+                        return false;
+                    }
+                }
+                foreach ($cost as $key => $value) {
+    
+                    $this->storage[$key] -= $value;
                 }
             }
-            foreach ($cost as $key => $value) {
-
-                $this->storage[$key] -= $value;
-            }
+            
             //$this->buildings[$buildingName] += 1; 
             $this->log("Dodano do kolejki budynek: ".$buildingName, "info");
             //odwołanie do schedulera
