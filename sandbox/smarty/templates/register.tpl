@@ -13,7 +13,9 @@
                         <label for="password">Hasło:</label>
                         <input class="form-control" type="password" name="password" id="password">  
                     </div>
-                    <button class="btn btn-primary" type="submit">Zarejestruj się</button>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Zarejestruj się</button>
+                    </div>
                 </form>
                 <a href="/login">
                     <button class="btn btn-primary">Zaloguj się</button>
