@@ -65,23 +65,8 @@
         global $smarty;
         $smarty->display('login.tpl');
     }, 'get');
-    
     Route::add('/login', function(){
         //echo "przetwarzanie logowania";
-        global $smarty, $db;
-        if (isset($_REQUEST['login']) && isset($_REQUEST['password'])) {
-            //zaloguj gracza
-            if($db->loginPlayer($_REQUEST['login'], $_REQUEST['password'])) {//spróbuj zalogować
-                //udało się
-                $gm = new GameManager();
-                $_SESSION['gm'] = $gm;
-                header('Location: /');
-            } else {
-                //nie udało się
-                $smarty->assign('error', "Niepoprawny login lub hasło!");
-                $smarty->display('login.tpl');
-            } 
-        }
         
     }, 'post');
 
@@ -91,19 +76,8 @@
     });
 
     Route::add('/register', function(){
+        global $smarty;
         #przetwarzanie rejesteacji
-        global $smarty, $db;
-        if (isset($_REQUEST['login']) && isset($_REQUEST['password'])) {
-            //zapisz usera do bazy
-            if($db->registerPlayer($_REQUEST['login'], $_REQUEST['password'])) {//próbujemy zapisać do bazy
-                //udało sie
-                $smarty->display('login.tpl');
-            } else {
-                //nie udało się utworzyc konta
-                $smarty->assign('error', "Niepoprawny nie udało się utworzyć konta!");
-                $smarty->display('register.tpl');
-            }
-        }
     }, 'post');
     
     Route::add('/upgrade/([a-z]*)/', function($target){
