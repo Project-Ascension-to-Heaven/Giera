@@ -1,5 +1,5 @@
 <h3>Plac wojskowy</h3>
-        <table class="table table-bordered">
+        <table class="table table-bordered" style="color: whitesmoke;">
             <tr>
                 <th>Nazwa jednostki</th>
                 <th>Ilość jednostek</th>
@@ -35,7 +35,7 @@
             </tr>
         </table>
 <h3>Obecne armie:</h3>
-        <table class="table table-bordered">
+        <table class="table table-bordered" style="color: whitesmoke;">
             <tr>
                 <th>Nazwa armii</th>
                 <th>Piechota</th>

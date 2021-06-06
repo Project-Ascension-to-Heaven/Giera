@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 
         <div class="container-fluid">
-            <div class="row" id="top">
+            <div class="row" id="top" style="background-image: url(header.jpg);">
                 <div class="col-2">
                     Nick: {$playerLogin|default:"Anonim"}
                 </div>
@@ -21,13 +21,13 @@
                     Monety: {$monety}
                 </div>
                 <div class="col-1">
-                    Kryształy: 21 <!-- nie oszukujmy się, nie potrzebna jest nam waluta premium -->
+                    Kryształy: WIP <!-- nie oszukujmy się, nie potrzebna jest nam waluta premium -->
                 </div>              <!-- no chyba że ma ktoś zamiar implementować sklep który działa, ja z chęcią popatrzę -->
                                      <!-- Prawda, jak ktoś ma duże cohones to niech to zrobi tak o --> 
             </div>
             <div class="row">
                 <div class="col-10" id="lewo">
-                    <img src="projekt.png" id="obrazTlo">
+                    <img src="tłoReady.jpg" id="obrazTlo">
                 </div>
                 <div class="col-2">
                     <h2>Budynki:</h2> <br>

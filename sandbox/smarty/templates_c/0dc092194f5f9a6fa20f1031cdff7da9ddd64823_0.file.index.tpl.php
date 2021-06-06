@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-25 19:01:09
+/* Smarty version 3.1.39, created on 2021-06-06 23:19:37
   from 'D:\xampp\htdocs\Giera\sandbox\smarty\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60ad2d559ba5b2_70386008',
+  'unifunc' => 'content_60bd3be9b31111_39433780',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0dc092194f5f9a6fa20f1031cdff7da9ddd64823' => 
     array (
       0 => 'D:\\xampp\\htdocs\\Giera\\sandbox\\smarty\\templates\\index.tpl',
-      1 => 1621962067,
+      1 => 1623014358,
       2 => 'file',
     ),
   ),
@@ -24,12 +24,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60ad2d559ba5b2_70386008 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60bd3be9b31111_39433780 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
         <div class="container-fluid">
-            <div class="row" id="top">
+            <div class="row" id="top" style="background-image: url(header.jpg);">
                 <div class="col-2">
                     Nick: <?php echo (($tmp = @$_smarty_tpl->tpl_vars['playerLogin']->value)===null||$tmp==='' ? "Anonim" : $tmp);?>
 
@@ -54,13 +54,13 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
                 </div>
                 <div class="col-1">
-                    Kryształy: 21 <!-- nie oszukujmy się, nie potrzebna jest nam waluta premium -->
+                    Kryształy: WIP <!-- nie oszukujmy się, nie potrzebna jest nam waluta premium -->
                 </div>              <!-- no chyba że ma ktoś zamiar implementować sklep który działa, ja z chęcią popatrzę -->
                                      <!-- Prawda, jak ktoś ma duże cohones to niech to zrobi tak o --> 
             </div>
             <div class="row">
                 <div class="col-10" id="lewo">
-                    <img src="projekt.png" id="obrazTlo">
+                    <img src="tłoReady.jpg" id="obrazTlo">
                 </div>
                 <div class="col-2">
                     <h2>Budynki:</h2> <br>
