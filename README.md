@@ -1,5 +1,6 @@
 # Ascension-to-Heaven Project
-Nie wiem co się dzieję kurwa mać, ale działa więc jest masno fest. - Snaksiu
+![image](https://user-images.githubusercontent.com/72550826/120927441-19ef8180-c6e1-11eb-99fd-30e66ae9f545.png)
+<br>Nie wiem co się dzieję kurwa mać, ale działa więc jest masno fest. - Snaksiu
 <br>Główni contributorzy: 
 <br> -kubo0 (kierownik projektu) = smarty, rooting, hotfixy, nowe upgrady budynków i ogólnie cały szkielet gry. 
 <br> -Snaksiu = cały VillageClass(surowce, zarobki, budynki itd.), stare jak i nowe upgrady budynków, memowe commity i masa hotfiów. Profesjonalny napierdalacz commitów, kocha plik README.md
